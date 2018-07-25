@@ -1,5 +1,10 @@
 @extends('layout')
 @section('content')
+<div class="panel panel-default">
+        <div class="panel-heading">
+            <a href="{{ url('user/list') }}" class="btn btn-sm btn-info btn-addon"><i class="glyphicon glyphicon-plus"></i>List</a>
+            <a href="{{ url('logout') }}" class="btn btn-sm btn-danger btn-addon"><i class="glyphicon glyphicon-plus"></i>Logout</a>
+        </div>
     <form class="form-horizontal" role="form" method="POST" action="{{ url('user', ['id' => $user->id]) }}">
         <input type="hidden" name="_method" value="PUT">
         <div class="panel panel-default">
@@ -56,4 +61,5 @@
             </div>
         </div>
     </form>
+</div>
 @endsection

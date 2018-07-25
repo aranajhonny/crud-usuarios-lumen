@@ -3,6 +3,7 @@
     <div class="panel panel-default">
         <div class="panel-heading">
             <a href="{{ url('user/create') }}" class="btn btn-sm btn-info btn-addon"><i class="glyphicon glyphicon-plus"></i>Create</a>
+            <a href="{{ url('logout') }}" class="btn btn-sm btn-danger btn-addon"><i class="glyphicon glyphicon-plus"></i>Logout</a>
         </div>
         <table class="table table-bordered has-action">
             <thead>
