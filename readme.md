@@ -22,7 +22,7 @@ en este crud utilize php sessions (nativa) debido a que se necesita para mantene
 
 Lumen es un microframework que se suele utilizar para microservicios o tareas especificas.
 
-Lo recomendable es hacer el fronted separado del backend si se utiliza una herramienta como esta.
+Lo recomendable es hacer el frontend separado del backend si se utiliza una herramienta como esta.
 
 > https://lumen.laravel.com/docs/5.4/authentication
 
