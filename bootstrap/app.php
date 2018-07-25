@@ -67,6 +67,20 @@ $app->routeMiddleware([
     'auth' => App\Http\Middleware\Authenticate::class,
 ]);
 
+//
+// $app->middleware([
+//     \Illuminate\Session\Middleware\StartSession::class,
+// ]);
+
+// $app->bind(\Illuminate\Session\SessionManager::class, function () use ($app) {
+//     return new \Illuminate\Session\SessionManager($app);
+// });
+
+// $app->configure('session');
+
+// $app->register(\Illuminate\Session\SessionServiceProvider::class);
+
+
 /*
 |--------------------------------------------------------------------------
 | Register Service Providers
@@ -80,6 +94,7 @@ $app->routeMiddleware([
 
 	$app->register(App\Providers\AppServiceProvider::class);
 	$app->register(App\Providers\AuthServiceProvider::class);
+
 // $app->register(App\Providers\EventServiceProvider::class);
 
 /*

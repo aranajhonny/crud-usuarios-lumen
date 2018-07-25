@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+use Faker\Factory as Faker;
+use Illuminate\Hashing\BcryptHasher;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -11,6 +15,27 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call('UsersTableSeeder');
-    }
+    	$password = Hash::make("admin");
+    	$faker = Faker::create();
+        foreach (range(1, 10) as $index) {
+           DB::table('users')->insert([
+            'username' => $faker->userName,
+            'first_name' =>  $faker->firstName,
+            'second_name' => $faker->lastName,
+            'address' => $faker->city,
+            'phone' =>  $faker->phoneNumber,
+            'email' => str_random(8).'@gmail.com',
+            'password' => $password,
+        ]);
+    	} 
+    	DB::table('users')->insert([
+            'username' => "admin",
+            'first_name' => $faker->firstName,
+            'second_name' => $faker->lastName,
+            'address' => $faker->city,
+            'phone' =>  $faker->phoneNumber,
+            'email' => str_random(8).'@gmail.com',
+            'password' => $password,
+        ]);
+	}
 }

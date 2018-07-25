@@ -15,13 +15,6 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-sm-2 control-label">Password</label>
-                    <div class="col-sm-10">
-                        <input type="password" name="password" class="form-control" value="{{  $user->password }}">
-                        <p class="help-block"></p>
-                    </div>
-                </div>
-                <div class="form-group">
                     <label class="col-sm-2 control-label">First name</label>
                     <div class="col-sm-10">
                         <input type="text" name="first_name" class="form-control" value="{{  $user->first_name }}">

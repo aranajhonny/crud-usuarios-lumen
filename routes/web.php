@@ -10,16 +10,17 @@
 | and give it the Closure to call when that URI is requested.
 |
 */
-
 $router->get('/', function () use ($router) {
-    return view('home', ['name' => 'James']);
+	return redirect('/login');
 });
 
 $router->get('login/','LoginController@loginPage');
 
+$router->get('logout/','LoginController@logout');
+
 $router->post('login/','LoginController@loginEndpoint');
 
-$router->get('user/list', 'UserController@index');
+$router->get('user/list/', 'UserController@index');
 
 $router->get('user/create/', 'UserController@create');
 
@@ -34,13 +35,3 @@ $router->get('user/{id}/', 'UserController@show');
 $router->put('user/{id}/', 'UserController@update');
 
 $router->delete('user/{id}/', 'UserController@destroy');
-
-// $router->group(['middleware' => 'auth'], function () use ($router) {
-//     $router->get('/', function ()    {
-//         // Uses Auth Middleware
-//     });
-
-//     $router->get('user/profile', function () {
-//         // Uses Auth Middleware
-//     });
-// });
